@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .container{
@@ -23,3 +24,35 @@
 .container__imagem{
     padding: 1em;
 }
+
+.lista-menu{
+    display:none;
+    position: absolute;
+    top: 100%;
+    width: 70vw;
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--amarelo);
+    font-weight: bold;
+}
+
+.lista-menu__link{
+    color: var(--roxo);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.container__botao{
+    display: none;
+}
+
+.container__botao:checked~.lista-menu{
+    display: block;
+}
+
